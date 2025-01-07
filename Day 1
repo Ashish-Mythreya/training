@@ -1,0 +1,69 @@
+React Native is used to develop mobile application
+ElectronJS is used to develop desktop application
+ReactJS is used to develop web application
+JavaScript is used to convert static page into dynamic page
+
+datatypes on javascript
+primitive datatypes
+  number
+  string
+  Boolean
+  Undefined
+  Null
+  bigint
+
+non-primitive datatypes
+  class
+  objects
+  array
+  functions
+  map
+  set
+
+Variables:
+1.Case-Sensitive
+2.start with letters,_,$
+3.can't start with numbers
+4.Reserved words
+5.Allow letters,_,$,numbers
+
+variables are dynamic in JS as there is no need to declare the datatype
+
+scope
+1.global
+2.script/local
+3.block
+
+variables are divided into three type
+1.var
+2.let
+3.const
+
+
+reassigning in let and variable is possible
+reassigning in const is not possible
+
+
+redeclaring with let is not accepted
+redeclaring with var is accepted
+redeclaring with const is not accepted
+
+variables.html
+
+Data Types:
+
+1)Dynamic type language
+Two types;
+
+1.Primitive data types
+2.Non-primitive datat types:Objects,Arrays
+
+To check the data type - typeof
+
+1.Primitive data type:predefined; we can store single values
+
+a.Numbers:integers,floats
+b.String:Stream of characters enclosed in quotes---single,double,backtick quotes;
+c.Boolean:true or false
+d.Null:empty value or no value
+e.Undefined:declare varaiable with no value
