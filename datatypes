@@ -1,0 +1,30 @@
+Data Types:
+
+1)Dynamic type language
+Two types;
+
+1.Primitive data types
+2.Non-primitive datat types:Objects,Arrays
+
+To check the data type - typeof
+
+1.Primitive data type:predefined; we can store single values
+
+a.Numbers:integers,floats
+b.String:Stream of characters enclosed in quotes---single,double,backtick quotes;
+c.Boolean:true or false
+d.Null:empty value or no value
+e.Undefined:declare varaiable with no value
+
+Condition:An expression that evaluates the result(true or false)'
+console.log(5>4);
+
+Conditional Statement:
+--To make the set instructions execute only when the condition is true
+
+Block of code(conditional block):set of instructions
+--when this block of code will execute ;it will execute when the specific condition is true
+indentation:
+     {
+    ---block of code
+    }
