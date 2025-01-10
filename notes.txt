@@ -1,0 +1,232 @@
+variables:
+1) static and dynamic types
+variables are used to store the data(any kind of data)
+
+VARIABLES:
+1)Case-sensitive
+2)start with letters,_,$
+3)cant start with numbers, reserved words
+
+How to declare variables:
+var
+let
+const
+
+Reassigning:
+1)Reassigning variables is possible by var:
+example 1:
+var a= 1
+a=5
+document.write(a+a)
+console.log(a+a)
+output:10
+
+example 2:
+        var a= "sashank"
+        a="sathwik"
+        a="ashish"
+        document.write(fav_std)
+        console.log(fav_std)
+output: ashish
+
+2)Reassigning variables is possible by let also:
+3)Reassigning variables is not possible by const:
+
+Redeclaring:
+1)Redeclaring with var is accepted:
+var a= 1
+a=5
+document.write(a+a)
+console.log(a+a)
+output:10
+2)Redeclaring with let is not accepted:
+        let a= 1
+        let a=2
+        document.write(a)
+        console.log(a)
+output:error
+3)Redeclaring with const is not accepted:
+
+Block scope:
+1)Variables declared with var doesnot has block scope:
+example:
+       var a = "sai"
+        {
+            var a = "kumar"
+            console.log(a)
+        }
+        console.log(a)
+output: kumar
+        kumar
+
+2)Variables declared with let has block scope:
+example:
+        let a = "Sai"
+        {
+            let a = "Kumar"
+            console.log(a)
+        }
+        console.log(a)
+output: Kumar
+Sai
+
+Data types:
+1)Dynamic type language:
+two types:
+1)primitive types
+2)non primitive types: objects, arrays
+
+to check the data type -typeof
+
+1)primitive data type: predefined ;we can store single values
+1)numbers: integers, floats
+2)string: stream of characters enclosed in quotes
+ back ticks introduced in ES6 version
+3)Boolean: true or false
+4)null: empty value or no value
+5)undefined: declared variables with no values
+
+condition: an expression that evaluates the result(true or false)
+condition statement:
+to make the set instructions execute only when the condition is true
+
+Code:
+        let a = 1
+        console.log("Hi "+a)
+        document.write('Hi +a+a' ,"<br>")
+        document.write(`Hi ${a+a}`, "<br>")
+        console.log(`Hi ${a+a}`)
+
+        let c = "sai"
+        let b= "kumar"
+        let age =30
+        document.write(`I am ${c} ${b} my age is ${age} years old`)
+
+
+Arthematic operations:
++,-,*,/
+multiplication
+division
+modulus operator
+exponential(raised to the power)
+
+Code:
+// alert("danger")
+        // document.write(alert)
+        // a=prompt("Enter your name")
+        // alert(a)
+        // let aa=prompt("Enter your name")
+        // alert(`My name is : ${aa}`)
+        let a1=prompt()
+        document.write(a1,"<br>")
+        document.write(typeof a1,"<br>")
+        let a2=prompt()
+        document.write(a1+ " "+ a2)
+        // let t=40
+        // let r=(t>40)?'Ac-off':'Ac-on'
+        // document.write(r,"<br>")
+        // let a=5
+        // let b="5"
+        // document.write(a>b && a>2,"<br>")
+        // document.write(a>b && a>12,"<br>")
+        // document.write(a>b || a>12,"<br>")
+        // document.write(!(a>12),"<br>")
+        // document.write(a==b,"<br>")
+        // document.write(a!=b,"<br>")
+        // document.write(a===b,"<br>")
+        // document.write(a!==b,"<br>")
+        // a+=40
+        // b-=5
+        // document.write(a,"<br>")
+        // document.write(b,"<br>")
+        // document.write(b,"<br>")
+        // document.write(a*b,"<br>")
+        // document.write(a**b,"<br>")
+        // document.write(a/b,"<br>")
+        // document.write(a%b)
+
+
+Conditional statement:
+To make the set instructions(block of code)(conditional block) execute only when the given condition is true
+used to decide whether the code has to be executed or skip based on the given condition
+Block of code: set of instructions
+Condition: An expression that evaluates an result(true or false)
+
+Methods:
+if
+if else
+else if
+switch
+
+if: only one possible condition:
+Code:
+    //    let a=5;
+    //    let b=10;
+    //    if(a<b){
+    //     document.write("Hi sashank", "<br>");
+    //    }
+    //    else{
+    //     document.write("Hi sathwik", "<br>");        
+    //    }
+    //    document.write("welcome to India");
+    // age=prompt("Enter your age:")
+    // name=prompt("Enter your name:")
+    // if(age<18){
+    //     alert(name+"you are too young to marry")
+    // }else if(age>35){
+    //     alert(name+"you are too old to marry")
+    // }else{
+    //     alert(name+" perfect age to marry")
+    // }
+    let A=parseInt(prompt("Enter the first number:"))
+    let B=parseInt(prompt("Enter the second number:"))
+    if((A>300 || B>300)&& A+B<500){
+        alert("Can team up")
+    }else{
+        alert("Cannot team up")
+    }
+
+1st question
+code:
+//function checkDivisibility() {
+            
+            //let number = parseInt(prompt("Enter a number:"));
+          
+           
+            //if 
+            //(isNaN(number)) {
+              //console.log("Please enter a valid number.");
+            //} else {
+              //if (number % 2 === 0 && number % 3 === 0) {
+                //alert(number + " is divisible by both 2 and 3.");
+              //} else {
+                //alert(number + " is not divisible by both 2 and 3.");
+              //}
+            //}
+          //}
+          
+          
+          //checkDivisibility();
+2nd code:
+
+          let a= parseInt(prompt("Enter a number:"));
+          b = parseInt(prompt("Enter a number:"));
+          c = parseInt(prompt("Enter a number:"));
+          if (a>b && a>c) {
+            alert(a + " is greater number among 3 numbers.");
+          } if(b>a && b>c) {
+            alert(b + " is greater number among 3 numbers. ");
+          } else{
+            alert(c + " is greater number among 3 numbers. ");
+          }
+3 code:
+      let a= parseInt(prompt("Enter no of working days:"));
+          b= parseInt(prompt("Enter no of absent days:"));
+          
+          d=(b/a)*100;
+          if(d<25){
+            alert(" you are eligible to write exam.");
+          }else{
+            alert("you are not eligible to write exam. ");
+          }
+
