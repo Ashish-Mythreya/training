@@ -30,15 +30,101 @@
 
         //Anonymous Function
         
-        let square = function(number) {
-            let n = number * number;
-            document.write(n);
-        };
+        // let square = function(number) {
+        //     let n = number * number;
+        //     document.write(n);
+        // };
 
-        let number = prompt("Enter the number:");
-        let result = square(number);
+        // let number = prompt("Enter the number:");
+        // let result = square(number);
 
-        
+        //Arrow Functions
+
+        // let c=()=>{
+	    //     console.log("Hi Ashish")
+        // }
+        // c()
+
+        //with parameters
+
+        // let x=(x,y)=>{
+        //     console.log(x+y)
+        // }
+        // x(20,30)
+
+        //Without using paranthesis
+        // let greet=x=>console.log(x);
+        // greet("hello")
+
+        //Arrow function with out argument
+        // let greet=()=>console.log("hello")
+        // greet()
+
+        //Arrow functions as a expression
+        // let age=18;
+        // let welcome=(age<18)?
+        // ()=>console.log("hi Gowtham"):
+        // ()=>console.log("hi sai chran");
+        // welcome()
+
+        //synchronous and asynchronous
+        // function task1(){
+        //     console.log("Task1:Start")
+        // }
+
+        // function task2(){
+        //     console.log("Task2:Start")
+        // }
+
+        // function task3(){
+        //     console.log("Task:Start")
+        // }
+        // task1()
+        // task2()
+        // task3()
+
+        //asynchronomous
+        //multiple tasks at a time
+        // console.log("hi ashish")
+        // setTimeout(()=>{
+        //         console.log("Hi iam waiting")
+        // },5000);
+        // console.log("I am in lab")
+
+        //javascript callbacks
+        //A call back function is a function that is passed argument to another function;
+
+        // function greet(name, callback) {
+        //     console.log(`Hello, ${name}!`);
+        //     callback();
+        //this calls the callback functions after greeting
+        // }
+        // function sayGoodbye(){
+        //     console.log("Goodbye")
+        //}
+        //call greet and pass sayGoodbyeas the callback
+        //greet("sam",sayGoodbye)
+
+        //promise
+        //eventual completion
+        //Three states
+        //1)pending:still not completed --continuing
+        //2)fulfilled:task completed
+        //3)Rejected:The operation is failed
+
+        let mypromise=new Promise((resolve,reject)=>{
+            let success=true;
+
+            if(success){
+                resolve("task completed")
+            }else{
+                reject("task failed")
+            }
+        })
+     
+
+
+
 
 
     </script>
