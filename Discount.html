@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let discountCode = "SAVE10"; 
+    let totalAmount = 100;  
+
+    if (discountCode === "SAVE10") {
+    totalAmount -= totalAmount *0.01
+    console.log("Discount applied: 10%");
+    } else if (discountCode === "SAVE20") {
+    totalAmount -= totalAmount * 0.20; 
+    console.log("Discount applied: 20%");
+    } else if (discountCode === "WELCOME") {
+    totalAmount -= totalAmount * 0.15;
+    console.log("Discount applied: 15%");
+    } else {
+    console.log("Invalid discount code");
+    }
+
+
+    console.log("Total after discount: $" + totalAmount.toFixed(2));
+    </script>
+</body>
+</html>

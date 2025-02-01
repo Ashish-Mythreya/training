@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Enter your Age:"));
+        let b = prompt("Are you a citizen of India (yes/no):");
+        let c = "yes";
+
+        if (b.toLowerCase() === "no") {
+            c = prompt("Did you pass the citizenship test (yes/no):");
+        }
+
+        if (a >= 18 && b.toLowerCase() === "yes" && c.toLowerCase() === "yes") {
+            document.write("You are eligible to vote.");
+        } else if (a >= 18 && b.toLowerCase() === "no" && c.toLowerCase() === "yes") {
+            document.write("You are eligible to vote.");
+        } else {
+            document.write("You are not eligible to vote.");
+        }
+
+    </script>
+</body>
+</html>
