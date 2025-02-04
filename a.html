@@ -4,32 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="a">
-        <h1>Rahul</h1>
-        <h1>Ram</h1>
-        
-       </div> 
-       <div id="b">
-       <h2>sam</h2>
-        <h2>venkat</h2>
-       </div>
-        <script>
-            //let n = document.createElement("h2")
-            //n.textContent="Ashish"
-            //let p = document.getElementById('a')
-            //let i = document.getElementById('i')
-            //p.insertBefore(n,i)
-            //console.log(p)
+    <!-- <div id="app"></div>
+    <script type="text/babel">
+        const element = <h1 className="a">Hello JSX</h1>  // creating a element in jsx
+        const root=ReactDOM.createRoot(document.getElementById('app'))
+        root.render(element)
+    </script> 
+    -->
+    <div id="'app">
+    </div>
+    <script type="text/babel">
+        const n=10;
+        const m= <h1>React is {n*2} times better than jsx </h1>
+        const r = ReactDOM.createRoot(document.getElementById('a'))
+        root.render(m)
+    </script>
 
-            let n = document.createElement("h2")
-            n.innertext="harshith"
-            let p = document.getElementById('a')
-            let i = document.getElementById('i')
-            p.insertBefore(n,i)
-            
-
-        </script>
+    
 </body>
 </html>
