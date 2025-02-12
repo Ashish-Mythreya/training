@@ -1,38 +1,20 @@
-import React, { useState } from "react";
-import "./App.css"; // Include your CSS file
+import { useState } from "react";
+import ChildA from "./childA";
+import ChildB from "./childB";
 
-const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+const Parent = () => {
   const [count, setCount] = useState(0);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle("dark", !darkMode); // Add this line to toggle the dark mode class on the body element
+  
+  const increment = () => {
+    setCount(c => c + 1);
   };
 
   return (
-    <div className={darkMode ? "dark" : ""}>
-      <header>
-        <h1>Light/Dark Toggle & Counter</h1>
-        <input
-          type="checkbox"
-          className="checkbox"
-          id="checkbox"
-          onChange={toggleDarkMode}
-        />
-        <label htmlFor="checkbox" className="checkbox-label">
-          <i className="fas fa-moon"></i>
-          <i className="fas fa-sun"></i>
-          <span className="ball"></span>
-        </label>
-      </header>
-      <main>
-        <h1>{count}</h1>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
-        <button onClick={() => setCount(count - 1)}>Decrement</button>
-      </main>
+    <div>
+      <ChildA />
+      <ChildB count={count} increment={increment} />
     </div>
   );
 };
 
-export default App;
+export default Parent;
