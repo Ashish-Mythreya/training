@@ -1,20 +1,77 @@
 import { useState } from "react";
-import ChildA from "./childA";
-import ChildB from "./childB";
+// import ChildA from "./childA";
+// import ChildB from "./childB";
 
-const Parent = () => {
-  const [count, setCount] = useState(0);
+// const Parent = () => {
+//   const [count, setCount] = useState(0);
   
-  const increment = () => {
-    setCount(c => c + 1);
-  };
+//   const increment = () => {
+//     setCount(c => c + 1);
+//   };
 
+//   return (
+//     <div>
+//       <ChildA />
+//       <ChildB count={count} increment={increment} />
+//     </div>
+//   );
+// };
+
+// export default Parent;
+
+//user 1 component
+import React, { createContext, useContext } from "react";
+
+// User Data
+const user = {
+  name: "John Doe",
+  email: "johndoe@example.com",
+};
+
+// --- Prop Drilling Approach ---
+const Profile = ({ user }) => (
+  <div>
+    <h2>Profile</h2>
+    <p>Name: {user.name}</p>
+    <p>Email: {user.email}</p>
+  </div>
+);
+
+const MiddleComponent = ({ user }) => <Profile user={user} />;
+
+const AppWithProps = () => <MiddleComponent user={user} />;
+
+// --- React Context Approach ---
+const UserContext = createContext();
+
+const ProfileWithContext = () => {
+  const user = useContext(UserContext);
   return (
     <div>
-      <ChildA />
-      <ChildB count={count} increment={increment} />
+      <h2>Profile (Using Context)</h2>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
     </div>
   );
 };
 
-export default Parent;
+const MiddleComponentWithContext = () => <ProfileWithContext />;
+
+const AppWithContext = () => (
+  <UserContext.Provider value={user}>
+    <MiddleComponentWithContext />
+  </UserContext.Provider>
+);
+
+// Main App Component to render both approaches
+export default function App() {
+  return (
+    <div>
+      <h1>Prop Drilling vs Context</h1>
+      <h3>Using Prop Drilling:</h3>
+      <AppWithProps />
+      <h3>Using React Context:</h3>
+      <AppWithContext />
+    </div>
+  );
+}
