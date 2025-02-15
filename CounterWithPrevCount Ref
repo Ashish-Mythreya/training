@@ -1,0 +1,22 @@
+import React,{useState,useEffect,useRef}from 'react'
+
+function counterWithPrev(){
+  const [count,setCount]=useState(0);
+  const prevCountRef=useRef();
+  //create a ref to store the previous
+
+  useEffect(()=>{
+    prevCountRef.current=count;
+  },[count])
+  return(
+    <div>
+      <p >current count:{count}</p>
+      <p>prevCount :{prevCountRef.current}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+    </div>
+    
+  )
+
+  
+}
+export default counterWithPrev;
