@@ -1,0 +1,30 @@
+// feb 17
+// function App(){
+//   const handleClick=()=>{
+//     alert("button clicked")
+
+//   };
+//   return(
+//     <button onClick={handleClick}>click me</button>
+//   )
+// }
+// export default App;
+
+// 2)
+import React,{useState} from "react";
+function App(){
+  // initially the value is set as empty state
+  const[text,setText]=useState("")
+
+  const handleChange=(event)=>{
+    setText(event.target.value)
+  }
+  return(
+    <div>
+    <input type="text" value={text} onChange={handleChange}/>
+    <p>your text:{text}</p>
+    </div>
+  )
+  
+}
+export default App;
