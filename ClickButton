@@ -1,0 +1,10 @@
+import React,{useState}from 'react'
+function App(){
+  const handleClick=()=>{
+    alert("Button clicked")
+  };
+  return(
+    <button onclick={handleClick}>click Me</button>
+  )
+}
+export default App;
